@@ -18,8 +18,8 @@ export default class ExampleComponent extends Component {
     } = this.props
 
     return (
-      <div className='test'>
-        Example Component: {text}
+      <div className='pony'>
+        <img src='https://media.giphy.com/media/EC5NlYpSCYU8M/giphy.gif'/>
       </div>
     )
   }
