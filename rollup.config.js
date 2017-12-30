@@ -23,16 +23,19 @@ export default {
     },
     {
       file: 'dist/index.cjs.js',
-      format: 'cjs'
+      format: 'cjs',
+      sourcemap: true
     },
     {
       file: 'dist/index.umd.js',
       name: 'Pony',
-      format: 'umd'
+      format: 'umd',
+      sourcemap: true
     },
     {
       file: 'dist/index.es.js',
-      format: 'es'
+      format: 'es',
+      sourcemap: true
     }
   ],
   external: [
@@ -49,8 +52,8 @@ export default {
     commonjs(),
     conditional(isProduction, [
       stripPropTypes(), // save ~35kb remove propTypes
-      uglify({}, minify),
-      gzip()
+      // uglify({}, minify),
+      // gzip()
     ])
   ]
 }
