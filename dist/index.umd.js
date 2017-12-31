@@ -210,18 +210,18 @@ var possibleConstructorReturn = function (self, call) {
 };
 
 /**
- * @class ExampleComponent
+ * @class Pony
  */
 
-var ExampleComponent = function (_Component) {
-  inherits(ExampleComponent, _Component);
+var Pony = function (_Component) {
+  inherits(Pony, _Component);
 
-  function ExampleComponent() {
-    classCallCheck(this, ExampleComponent);
-    return possibleConstructorReturn(this, (ExampleComponent.__proto__ || Object.getPrototypeOf(ExampleComponent)).apply(this, arguments));
+  function Pony() {
+    classCallCheck(this, Pony);
+    return possibleConstructorReturn(this, (Pony.__proto__ || Object.getPrototypeOf(Pony)).apply(this, arguments));
   }
 
-  createClass(ExampleComponent, [{
+  createClass(Pony, [{
     key: 'render',
     value: function render() {
       return React__default.createElement(
@@ -231,10 +231,10 @@ var ExampleComponent = function (_Component) {
       );
     }
   }]);
-  return ExampleComponent;
+  return Pony;
 }(React.Component);
 
-return ExampleComponent;
+return Pony;
 
 })));
 //# sourceMappingURL=index.umd.js.map
