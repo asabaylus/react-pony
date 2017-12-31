@@ -1,5 +1,5 @@
 /**
- * @class ExampleComponent
+ * @class Pony
  */
 
 import React, { Component } from 'react'
@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 
 import './styles.css'
 
-export default class ExampleComponent extends Component {
+export default class Pony extends Component {
   static propTypes = {
     text: PropTypes.string
   }
