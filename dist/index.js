@@ -1,4 +1,4 @@
-var Pony = (function (React,PropTypes) {
+var Pony = (function (React) {
 'use strict';
 
 function __$styleInject(css, returnValue) {
@@ -20,7 +20,6 @@ function __$styleInject(css, returnValue) {
 }
 
 var React__default = 'default' in React ? React['default'] : React;
-PropTypes = PropTypes && PropTypes.hasOwnProperty('default') ? PropTypes['default'] : PropTypes;
 
 (function(self) {
   'use strict';
@@ -724,10 +723,6 @@ var Pony = function (_Component) {
   return Pony;
 }(React.Component);
 
-Pony.propTypes = {
-  apiKey: PropTypes.string.isRequired
-};
-
 return Pony;
 
-}(React,PropTypes));
+}(React));

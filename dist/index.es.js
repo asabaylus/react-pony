@@ -17,7 +17,6 @@ function __$styleInject(css, returnValue) {
 }
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 (function(self) {
   'use strict';
@@ -720,10 +719,6 @@ var Pony = function (_Component) {
   }]);
   return Pony;
 }(Component);
-
-Pony.propTypes = {
-  apiKey: PropTypes.string.isRequired
-};
 
 export default Pony;
 //# sourceMappingURL=index.es.js.map

@@ -1,8 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react'), require('prop-types')) :
-	typeof define === 'function' && define.amd ? define(['react', 'prop-types'], factory) :
-	(global.Pony = factory(global.React,global.PropTypes));
-}(this, (function (React,PropTypes) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react')) :
+	typeof define === 'function' && define.amd ? define(['react'], factory) :
+	(global.Pony = factory(global.React));
+}(this, (function (React) { 'use strict';
 
 function __$styleInject(css, returnValue) {
   if (typeof document === 'undefined') {
@@ -23,7 +23,6 @@ function __$styleInject(css, returnValue) {
 }
 
 var React__default = 'default' in React ? React['default'] : React;
-PropTypes = PropTypes && PropTypes.hasOwnProperty('default') ? PropTypes['default'] : PropTypes;
 
 (function(self) {
   'use strict';
@@ -726,10 +725,6 @@ var Pony = function (_Component) {
   }]);
   return Pony;
 }(React.Component);
-
-Pony.propTypes = {
-  apiKey: PropTypes.string.isRequired
-};
 
 return Pony;
 

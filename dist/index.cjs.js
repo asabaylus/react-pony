@@ -22,7 +22,6 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = require('react');
 var React__default = _interopDefault(React);
-var PropTypes = _interopDefault(require('prop-types'));
 
 (function(self) {
   'use strict';
@@ -725,10 +724,6 @@ var Pony = function (_Component) {
   }]);
   return Pony;
 }(React.Component);
-
-Pony.propTypes = {
-  apiKey: PropTypes.string.isRequired
-};
 
 module.exports = Pony;
 //# sourceMappingURL=index.cjs.js.map
