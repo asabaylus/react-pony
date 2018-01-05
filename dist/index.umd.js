@@ -695,14 +695,16 @@ var Pony = function (_Component) {
       var _this2 = this;
 
       var randInt = Math.floor(Math.random() * 25) + 1;
-      fetch('https://api.giphy.com/v1/gifs/search?api_key=' + this.props.apiKey + '&q=my+little+pony&limit=25&offset=0&rating=Y&lang=en', {
-        headers: {
-          'Access-Control-Allow-Origin': ''
-        }
-      }).then(function (response) {
+      var q = 'my+little+pony';
+      var limit = '25';
+      var endpoint = 'https://api.giphy.com/v1/gifs/search?api_key=' + this.props.apiKey + '&q=' + q + '&limit=' + limit + '&offset=0&rating=Y&lang=en';
+
+      fetch(endpoint, { method: 'GET' }).then(function (response) {
         return response.json();
       }).then(function (response) {
-        return _this2.setState({ myPony: response.data[randInt] });
+        return _this2.setState({ myPony: response.data[randInt] }).catch(function (error) {
+          console.log('Looks like there was a problem: \n', error);
+        });
       });
     }
   }, {
