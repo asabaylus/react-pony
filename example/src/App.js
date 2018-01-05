@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-import ExampleComponent from 'react-pony'
+import Pony from 'react-pony'
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <Pony apiKey='xe8c740Lt4F7dDcsFCIw6HkpJzxmCFKJ' />
       </div>
     )
   }
