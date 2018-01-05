@@ -24,14 +24,13 @@ export default class Pony extends Component {
   componentDidMount() {
      const randInt = Math.floor(Math.random() * 25) + 1;
      fetch(`https://api.giphy.com/v1/gifs/search?api_key=${this.props.apiKey}&q=my+little+pony&limit=25&offset=0&rating=Y&lang=en`, 
-       { 
-        headers:{
-          'Access-Control-Allow-Origin':''
-        }
-      }
+       { headers:{ 'Access-Control-Allow-Origin': '*' } }
      )
       .then(response => response.json())
       .then(response => this.setState({ myPony: response.data[ randInt ] })
+      .catch(function(error) {
+        console.log('Looks like there was a problem: \n', error);
+      });
     )
   }
 
