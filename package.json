@@ -15,15 +15,14 @@
     "test": "react-scripts test --env=jsdom",
     "build": "rollup -c --environment NODE_ENV:production",
     "start": "rollup -c -w",
-    "prepublish": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
+    "prepublish": "yarn build",
+    "predeploy": "cd example && yarn install && yarn build",
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
     "whatwg-fetch": "^2.0.3"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.4",
     "react": "^0.14.9 || ^15.0.0 || ^16.0.0",
     "react-dom": "^0.14.9 || ^15.0.0 || ^16.0.0"
   },
@@ -42,14 +41,12 @@
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.1",
     "rollup-plugin-conditional": "^1.1.1",
-    "rollup-plugin-gzip": "^1.3.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-postcss": "^0.5.5",
-    "rollup-plugin-strip-prop-types": "^1.0.2",
-    "rollup-plugin-uglify": "^2.0.1",
-    "uglify-es": "^3.3.3"
+    "rollup-plugin-strip-prop-types": "^1.0.2"
   },
   "files": [
-    "dist"
+    "dist",
+    "lib"
   ]
 }
