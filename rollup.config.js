@@ -25,6 +25,9 @@ export default {
       sourcemap: true
     }
   ],
+  globals: {
+    'react': 'React'
+  },
   external: [
     'react',
     'react-dom'
