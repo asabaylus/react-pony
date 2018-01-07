@@ -14,13 +14,13 @@ export default {
   input: 'src/index.js',
   output: [
     {
-      file: 'dist/index.umd.js',
+      file: pkg.main,
       name: 'Pony',
       format: 'umd',
       sourcemap: true
     },
     {
-      file: 'lib/index.es.js',
+      file: pkg.module,
       format: 'es',
       sourcemap: true
     }

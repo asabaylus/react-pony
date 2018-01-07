@@ -18,22 +18,38 @@ export default class Pony extends Component {
     
     this.state = {
       myPony: {},
+      ponies: []
     };
   }  
   
+  displayRandomPony(){
+    const randInt = Math.floor(Math.random() * 25) + 1;
+    return this.setState({ myPony: this.state.ponies[ randInt ] })
+  }
+  
+  handleClick = () => {
+      this.displayRandomPony()  
+  }
+  
   componentDidMount() {
-     const randInt = Math.floor(Math.random() * 25) + 1;
-     const q = 'my+little+pony'
-     const limit = '25'
-     const endpoint = `https://api.giphy.com/v1/gifs/search?api_key=${this.props.apiKey}&q=${q}&limit=${limit}&offset=0&rating=Y&lang=en`;
-     
-     fetch(endpoint, { method: 'GET' })
-      .then(response => response.json())
-      .then(response => this.setState({ myPony: response.data[ randInt ] })
-      .catch(function(error) {
-        console.log('Looks like there was a problem: \n', error);
-      })
-    )
+    const q = 'my+little+pony'
+    const limit = '25'
+    const endpoint = `https://api.giphy.com/v1/gifs/search?api_key=${this.props.apiKey}&q=${q}&limit=${limit}&offset=0&rating=Y&lang=en`;
+    
+    window.onkeyup = (e) => {
+        e.preventDefault()
+        if (e.keyCode == 32) {
+          this.displayRandomPony()
+        }
+    }
+      
+    fetch(endpoint, { method: 'GET' })
+     .then(response => response.json())
+     .then(response => this.setState({ ponies: response.data }))
+     .then(data => this.displayRandomPony())
+     .catch(function(error) {
+       console.log('Looks like there was a problem: \n', error);
+     })
   }
 
   render() {
@@ -52,6 +68,7 @@ export default class Pony extends Component {
             allowFullScreen>
           </iframe>
         </div>
+        <button onClick={this.handleClick}>Get Another Pony</button>  
       </div>
     )
   }
