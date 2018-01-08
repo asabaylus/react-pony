@@ -53,9 +53,7 @@ export default class Pony extends Component {
   }
 
   render() {
-    const {
-      myPony
-    } = this.state
+    const { myPony } = this.state
     
     return (
       <div className="pony">
@@ -68,6 +66,7 @@ export default class Pony extends Component {
             allowFullScreen>
           </iframe>
         </div>
+        <input readOnly value={this.state.myPony.bitly_url} />
         <button onClick={this.handleClick}>Get Another Pony</button>  
       </div>
     )

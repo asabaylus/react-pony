@@ -39,9 +39,9 @@ export default {
     }),
     resolve(),
     commonjs(),
-    conditional(isProduction, [
+    // conditional(isProduction, [
       stripPropTypes(), // save ~35kb remove propTypes
-    ])
+    // ])
   ],
   // surpress 'this' keyword is equivalent to 'undefined' warning
   onwarn(warning, warn) {

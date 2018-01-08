@@ -10,7 +10,6 @@
   },
   "main": "dist/index.js",
   "module": "lib/index.es.js",
-  "jsnext:main": "dist/index.es.js",
   "scripts": {
     "test": "react-scripts test --env=jsdom",
     "build": "rollup -c --environment NODE_ENV:production",
