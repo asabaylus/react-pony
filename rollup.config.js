@@ -42,5 +42,10 @@ export default {
     conditional(isProduction, [
       stripPropTypes(), // save ~35kb remove propTypes
     ])
-  ]
+  ],
+  // surpress 'this' keyword is equivalent to 'undefined' warning
+  onwarn(warning, warn) {
+    if (warning.code === 'THIS_IS_UNDEFINED') return;
+    warn(warning); // this requires Rollup 0.46
+  }
 }
